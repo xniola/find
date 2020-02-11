@@ -1,0 +1,2 @@
+test/file1.txt
+test/directory1 r

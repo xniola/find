@@ -1,0 +1,132 @@
+WORD aria
+TOTAL OCCURRENCES 6
+FILE test/directory1/directoryFile2.txt
+Occorrenze: 5
+POSITION
+37 12
+41 4
+41 14
+93 17
+99 16
+FILE test/directory1/subDirectory1/subDirectoryFile1.txt
+Occorrenze: 1
+POSITION
+9 1
+FILE test/directory1/directoryFile1.txt
+Occorrenze: 0
+FILE test/directory1/subDirectory1/subDirectoryFile2.txt
+Occorrenze: 0
+FILE test/file1.txt
+Occorrenze: 0
+
+WORD genio
+TOTAL OCCURRENCES 2
+FILE test/directory1/subDirectory1/subDirectoryFile1.txt
+Occorrenze: 1
+POSITION
+11 1
+FILE test/file1.txt
+Occorrenze: 1
+POSITION
+16 13
+FILE test/directory1/directoryFile1.txt
+Occorrenze: 0
+FILE test/directory1/directoryFile2.txt
+Occorrenze: 0
+FILE test/directory1/subDirectory1/subDirectoryFile2.txt
+Occorrenze: 0
+
+WORD una
+TOTAL OCCURRENCES 5
+FILE test/file1.txt
+Occorrenze: 2
+POSITION
+10 15
+103 7
+FILE test/directory1/directoryFile2.txt
+Occorrenze: 2
+POSITION
+63 6
+84 6
+FILE test/directory1/subDirectory1/subDirectoryFile1.txt
+Occorrenze: 1
+POSITION
+10 1
+FILE test/directory1/directoryFile1.txt
+Occorrenze: 0
+FILE test/directory1/subDirectory1/subDirectoryFile2.txt
+Occorrenze: 0WORD aria
+TOTAL OCCURRENCES 6
+FILE test/file1.txt
+Occorrenze: 0
+POSITION
+0 0
+FILE test/directory1/directoryFile1.txt
+Occorrenze: 0
+POSITION
+0 0
+FILE test/directory1/subDirectory1/subDirectoryFile2.txt
+Occorrenze: 0
+POSITION
+0 0
+FILE test/directory1/subDirectory1/subDirectoryFile1.txt
+Occorrenze: 1
+POSITION
+9 1
+FILE test/directory1/directoryFile2.txt
+Occorrenze: 5
+POSITION
+37 12
+41 4
+41 14
+93 17
+99 16
+
+WORD genio
+TOTAL OCCURRENCES 2
+FILE test/file1.txt
+Occorrenze: 1
+POSITION
+16 13
+FILE test/directory1/directoryFile1.txt
+Occorrenze: 0
+POSITION
+0 0
+FILE test/directory1/subDirectory1/subDirectoryFile2.txt
+Occorrenze: 0
+POSITION
+0 0
+FILE test/directory1/subDirectory1/subDirectoryFile1.txt
+Occorrenze: 1
+POSITION
+11 1
+FILE test/directory1/directoryFile2.txt
+Occorrenze: 0
+POSITION
+0 0
+
+WORD una
+TOTAL OCCURRENCES 5
+FILE test/file1.txt
+Occorrenze: 2
+POSITION
+10 15
+103 7
+FILE test/directory1/directoryFile1.txt
+Occorrenze: 0
+POSITION
+0 0
+FILE test/directory1/subDirectory1/subDirectoryFile2.txt
+Occorrenze: 0
+POSITION
+0 0
+FILE test/directory1/subDirectory1/subDirectoryFile1.txt
+Occorrenze: 1
+POSITION
+10 1
+FILE test/directory1/directoryFile2.txt
+Occorrenze: 2
+POSITION
+63 6
+84 6
+
