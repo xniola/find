@@ -1,12 +1,14 @@
-Descrizione
+**Descrizione**
+
 L'obiettivo del progetto è quello di sviluppare l'applicazione find che consente di individuare il numero di occorrenze di un insieme di stringhe all'interno di un gruppo di file. Per determinare il numero di occorrenze (e la loro posizione) si consiglia di utilizzare l'Algoritmo di Knuth-Morris e Pratt. Ad ogni esecuzione l'applicazione produrrà in output la lista dei file analizzati con le occorrenze della stringa nel testo insieme alle informazioni riguardante la posizioni della stesse. Le stesse informazioni prodotte in output potranno essere salvate su di un file esterno.
 
 I sorgenti devono essere consegnati in un archivio .zip o .tgz. Gli script Makefile o CMake devono essere acclusi per supportare la compilazione.
 
-Report
+**Report**
+
 Per ogni parola ricercata, il report conterrà le seguenti informazioni:
 
-WORD <word1>\r\n
+_WORD <word1>\r\n
 TOTAL <total_occurrences_word1>\r\n
 FILE <absoluthepath_file1>\r\n
 OCCURRENCES <total_occurrences_file1>\r\n
@@ -18,14 +20,15 @@ FILE <absoluthepath_filek>\r\n
 OCCURRENCES <total_occurrences_filek>\r\n
 <line1> <char1>\r\n
 ...
-<linem> <charm>\r\n 
+<linem> <charm>\r\n _
+
 Il file terminerà con una riga vuota (\r\n).
 
 Le parole vengono elencate nel report in ordine alfabetico mentre per ogni parola i file vengono presentati in ordine decrescente per occorrenza. Nel caso di più file con il medesimo numero di occorrenze i file verranno presentati in ordine alfabetico (usando il path assoluto).
 
 Se ad esempio consideriamo i file messi a disposizione al seguente link, collocati nella directory /home/loreti/Documents, il risultato della ricerca delle parole aria, una e genio, il risultato sarà:
 
-WORD aria\r\n
+_WORD aria\r\n
 TOTAL 2\r\n
 FILE /home/loreti/Documents/marzo1821.txt\r\n
 OCCURRENCES 2\r\n
@@ -51,25 +54,32 @@ OCCURRENCES 4\r\n
 FILE /home/loreti/Documents/5maggio.txt\r\n
 OCCURRENCES 1\r\n
 10 14\r\n
-\r\n
-Funzionalità e Uso
+\r\n_
+  
+**Funzionalità e Uso**
+  
 L'applicazione find può essere usata sia per generare dei report delle analisi che per estrarre informazioni da report generati in esecuzioni precedenti.
 
-Generazione di report
+**Generazione di report**
+  
 Per generare un nuovo report occorre indicare le parole da ricercare e le directory o file dove eseguire la ricerca. I file e le directory da analizzare verranno elencate in un file, da passare come input al programma, con la seguente struttura:
 
-<path1> [r]\r\n
+_<path1> [r]\r\n
 <path2> [r]\r\n
 ...
 <pathk> [r]\r\n
-\r\n
+\r\n_
+  
 Ogni <pathi> potrà essere un path assoluto o relativo ad un file o directory. Nel secondo caso, il parametro r, opzionale, indicherà se occorra analizzare ricorsivamente le sottodirectory. Se non presente solo i file regolari nella directory verranno analizzati.
 
 L'elenco delle parole da ricercare, invece, verrà passato al programma attraverso un file della forma:
 
-word1\r\n
+_word1\r\n
 word2\r\n
-...
+..._
+  
+**Sinopsi**
+  
 L'esecuzione del programma avverrà quindi con i seguenti parametri:
 
 find (--words|-w) <wordfile> (--input|-i) <inputfile> 
