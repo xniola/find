@@ -95,12 +95,15 @@ Program execution will take place with the following parameters:
 In this case the report will be printed at the end of execution.
 
 To save the report to a particular file you will need to add the parameter:
+
 ```--output|-o <outputfile>```
 
 During the analysis phase, it will be possible to ignore files with specific extensions by adding the parameter:
+
 ```--exclude|-e <ext>```
 
 Finally, to view the analysis process, the parameter can be added:
+
 ```--verbose|-v```
 
 
@@ -124,7 +127,7 @@ Once the report file has been generated, the find program can be used to retriev
 ```$ find --report|-r <reportfile> --show <word> <n>```
 If <n> is omitted, the value 1 is used.
 
-Print all locations where the word <word> is needed in the <file> file:
+* Print all locations where the word <word> is needed in the <file> file:
 
 ```$ find --report|-r <reportfile> --show <word> --file <file>```
 If <word> is not needed in <file>, an appropriate message is printed on the screen.
