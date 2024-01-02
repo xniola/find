@@ -1,12 +1,12 @@
-**Descrizione**
+## Description
 
-L'obiettivo del progetto è quello di sviluppare l'applicazione find che consente di individuare il numero di occorrenze di un insieme di stringhe all'interno di un gruppo di file. Per determinare il numero di occorrenze (e la loro posizione) si consiglia di utilizzare l'Algoritmo di Knuth-Morris e Pratt. Ad ogni esecuzione l'applicazione produrrà in output la lista dei file analizzati con le occorrenze della stringa nel testo insieme alle informazioni riguardante la posizioni della stesse. Le stesse informazioni prodotte in output potranno essere salvate su di un file esterno.
+The goal of this project is to develop the find application that allows the number of occurrences of a set of strings within a group of files to be identified. The Knuth-Morris and Pratt Algorithm should be used to determine the number of occurrences (and their location). At each run, the application will output the list of analyzed files with the occurrences of the string in the text along with information regarding the positions of the string. The same information produced in output may be saved to an external file.
 
-I sorgenti devono essere consegnati in un archivio .zip o .tgz. Gli script Makefile o CMake devono essere acclusi per supportare la compilazione.
+The sources must be delivered in a .zipper or .tgz archive. Makefile or CMake scripts must be enclosed to support compilation.
 
-**Report**
+## Report
 
-Per ogni parola ricercata, il report conterrà le seguenti informazioni:
+For each word searched, the report will contain the following information:
 
 _WORD <word1>\r\n
 TOTAL <total_occurrences_word1>\r\n
@@ -22,11 +22,11 @@ OCCURRENCES <total_occurrences_filek>\r\n
 ...
 <linem> <charm>\r\n _
 
-Il file terminerà con una riga vuota (\r\n).
+The file will end with a blank line (\r\n).
 
-Le parole vengono elencate nel report in ordine alfabetico mentre per ogni parola i file vengono presentati in ordine decrescente per occorrenza. Nel caso di più file con il medesimo numero di occorrenze i file verranno presentati in ordine alfabetico (usando il path assoluto).
+The words are listed in the report in alphabetical order while for each word the files are presented in descending order by occurrence. In the case of multiple files with the same number of occurrences the files will be presented in alphabetical order (using absolute path).
 
-Se ad esempio consideriamo i file messi a disposizione al seguente link, collocati nella directory /home/loreti/Documents, il risultato della ricerca delle parole aria, una e genio, il risultato sarà:
+For example, if we consider the files made available at the following link, located in the directory /home/loreti/Documents, the result of searching for the words aria, una and genius, the result will be:
 
 _WORD aria\r\n
 TOTAL 2\r\n
@@ -56,13 +56,13 @@ OCCURRENCES 1\r\n
 10 14\r\n
 \r\n_
   
-**Funzionalità e Uso**
+## Features
   
 L'applicazione find può essere usata sia per generare dei report delle analisi che per estrarre informazioni da report generati in esecuzioni precedenti.
 
-**Generazione di report**
+## Reports
   
-Per generare un nuovo report occorre indicare le parole da ricercare e le directory o file dove eseguire la ricerca. I file e le directory da analizzare verranno elencate in un file, da passare come input al programma, con la seguente struttura:
+To generate a new report, you need to indicate the words to be searched and the directories or files where to perform the search. The files and directories to be analyzed will be listed in a file, to be passed as input to the program, with the following structure:
 
 _<path1> [r]\r\n
 <path2> [r]\r\n
@@ -70,48 +70,50 @@ _<path1> [r]\r\n
 <pathk> [r]\r\n
 \r\n_
   
-Ogni <pathi> potrà essere un path assoluto o relativo ad un file o directory. Nel secondo caso, il parametro r, opzionale, indicherà se occorra analizzare ricorsivamente le sottodirectory. Se non presente solo i file regolari nella directory verranno analizzati.
+Each <path> may be an absolute path or relative to a file or directory. In the second case, the optional r parameter will indicate whether subdirectories need to be parsed recursively. If not present only regular files in the directory will be parsed.
 
-L'elenco delle parole da ricercare, invece, verrà passato al programma attraverso un file della forma:
+The list of words to be searched, however, will be passed to the program through a file of the form:
 
 _word1\r\n
 word2\r\n
 ..._
   
-**Sinopsi**
+## Syntax
   
-L'esecuzione del programma avverrà quindi con i seguenti parametri:
+Program execution will take place with the following parameters:
 
-find (--words|-w) <wordfile> (--input|-i) <inputfile> 
-In questo caso il report verrà stampato a termine dell'esecuzione.
+$ find (--words|-w) <wordfile> (--input|-i) <inputfile> 
 
-Per salvare il report su un file particolare occorrerà aggiungere il parametro
+In this case the report will be printed at the end of execution.
 
+To save the report to a particular file you will need to add the parameter:
 --output|-o <outputfile>
-Durante la fase di analisi sarà possibile ignorare i file con specifiche estensioni, aggiungendo il parametro:
 
+During the analysis phase, it will be possible to ignore files with specific extensions by adding the parameter:
 --exclude|-e <ext>
-Infine, per visionare il processo di analisi si potrà aggiungere il parametro
 
+Finally, to view the analysis process, the parameter can be added:
 --verbose|-v
-In questo caso per ogni file (o directory) analizzata occorrerà stampare messaggi che indicano l'inizio dell'elaborazione, il termine ed il tempo necessario all'analisi. Un possibile schema potrebbe essere (i tempi riportati non sono indicativi):
 
-Inizio elaborazione parola: aria
-Inizio elaborazione directory: /home/loreti/Documents
-Inizio elaborazione file: /home/loreti/Documents/marzo1821.txt
-Fine elaborazione file: /home/loreti/Documents/marzo1821.txt (0.2 sec)
-Inizio elaborazione file: /home/loreti/Documents/5maggio.txt
-Fine elaborazione file: /home/loreti/Documents/5maggio.txt (0.1 sec)
-Fine elaborazione parola: aria
-Analisi dei report
-Una volta generato il file di report, il programma find potrà essere usato per recuperare le informazioni salvate. Potremmo:
 
-* Stampare la lista dei file dove occorre almeno <n> volte la parola <word>:
+In this case for each file (or directory) analyzed it will be necessary to print messages indicating the start of processing, the end, and the time required for analysis. A possible pattern could be (the times given are not indicative):
+
+Word processing start: air
+Start directory processing: /home/loreti/Documents
+Start processing file: /home/loreti/Documents/marzo1821.txt
+End file processing: /home/loreti/Documents/marzo1821.txt (0.2 sec)
+Start file processing: /home/loreti/Documents/5may.txt
+End of file processing: /home/loreti/Documents/5maggio.txt (0.1 sec)
+End word processing: air
+Report analysis
+Once the report file has been generated, the find program can be used to retrieve the saved information. We could:
+
+* Print the list of files where at least <n> times the word <word> is needed:
 
 find --report|-r <reportfile> --show <word> <n>
-Se <n> viene omesso, si utilizza il valore 1.
+If <n> is omitted, the value 1 is used.
 
-* Stampare tutte le posizioni dove la parola <word> occorre nel file <file>:
+Print all locations where the word <word> is needed in the <file> file:
 
 find --report|-r <reportfile> --show <word> --file <file>
-Se <word> non occorre in <file>, viene stampato a video un messaggio opportuno.
+If <word> is not needed in <file>, an appropriate message is printed on the screen.
