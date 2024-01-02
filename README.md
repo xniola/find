@@ -125,9 +125,9 @@ Once the report file has been generated, the find program can be used to retriev
 * Print the list of files where at least <n> times the word <word> is needed:
 
 ```$ find --report|-r <reportfile> --show <word> <n>```
-If <n> is omitted, the value 1 is used.
+If **n** is omitted, the value 1 is used.
 
 * Print all locations where the word <word> is needed in the <file> file:
 
 ```$ find --report|-r <reportfile> --show <word> --file <file>```
-If <word> is not needed in <file>, an appropriate message is printed on the screen.
+If **word** is not needed in **file**, an appropriate message is printed on the screen.
